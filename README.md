@@ -231,6 +231,14 @@ Force password complexity:
 
     password  requisite  pam_cracklib.so try_first_pass retry=3 minlength=16lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1 difok=4 reject_username
 
+### Further maintenance
+
+Whenever updates are available in the repository, run:
+
+    cd /var/www/item-catalog-files
+    git pull
+    touch ../item-catalog/item-catalog.wsgi
+
 ## Third-Party Resources
 
 https://www.techonthenet.com/linux/commands/chown.php
