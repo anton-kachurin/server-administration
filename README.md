@@ -12,15 +12,15 @@ is used as a data storage, and Apache2 with mod_wsgi is the webserver of choice.
 
 ## Server summary
 
-Server IP: 35.167.154.83
+Sample server IP: 35.167.154.83
 
-Website address: http://item-catalog.35.167.154.83.nip.io
+Sample website address: http://item-catalog.35.167.154.83.nip.io
 
 ### Initial setup
 
 Login as `root`:
 
-    ssh -i ~/.ssh/udacity_key.rsa root@35.167.154.83
+    ssh -i ~/.ssh/ssh_key.rsa root@35.167.154.83
 
 Create a new user named `grader` and give it the permission to sudo:
 
@@ -59,7 +59,7 @@ Logout from SSH session
 
 Login as `grader`:
 
-    ssh -i ~/.ssh/udacity_key.rsa grader@35.167.154.83 -p 2200
+    ssh -i ~/.ssh/ssh_key.rsa grader@35.167.154.83 -p 2200
 
 Configure firewall:
 
@@ -138,10 +138,7 @@ else:
 Copy project files to the server:
 
     cd ../item-catalog-files
-    git clone https://github.com/anton-kachurin/item-catalog.git
-    mv item-catalog/* .
-    mv item-catalog/.g* .
-    rmdir item-catalog
+    git clone https://github.com/anton-kachurin/udacity-item-catalog.git .
 
 Create config file:
 
@@ -151,7 +148,7 @@ Create config file:
 
 Create `g_client_secrets.json` and `jb_client_secrets.json`:
 
-    see [step 5](https://github.com/anton-kachurin/item-catalog/blob/master/README.md#installation)
+    see [step 5](https://github.com/anton-kachurin/udacity-item-catalog/blob/master/README.md#installation)
 
 Create VirtualHost config:
 
